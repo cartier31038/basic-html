@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Practice</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+      }
+      /* Header */
+      header {
+        background-color: #1C658C;
+        padding: 0.25rem 1rem;
+      }
+      header > h1,
+      header > p {
+        color: white;
+      }
+      /* Main */
+      main {
+        display: grid;
+        /* grid-template-columns: 60% 10%; */
+        grid-template-areas: 'main main side-menu';
+        padding: 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .main-section {
+        grid-area: main;
+      }
+      .intro-section {
+        background-color: #D8D2CB;
+        background-image: url('https://source.unsplash.com/1000x200/?nature,water');
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-clip: padding-box; */
+        border-radius: 10px;
+        color: white;
+        padding: 0.25rem 1rem;
+      }
+      .intro-section > h2 {
+        color: #398AB9;
+      }
+      .content-article {
+        border-radius: 10px;
+        background-color: #EEEEEE;
+        /* padding: 0.25rem 1rem; */
+        margin: 0.25rem 0;
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        column-gap: 0.5rem;
+        align-items: center;
+      }
+      .content-thumbnail {
+        width: 120px;
+        height: 120px;
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+      }
+      /* .content-desc > p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      } */
+      /* Side Menu */
+      .side-menu {
+        grid-area: side-menu;
+        background-color: #D8D2CB;
+        border-radius: 10px;
+        padding: 0 1rem;
+        margin-left: 1rem;
+      }
+      .navigation-list {
+        list-style: none;
+        /* padding-left: 10px; */
+        padding-inline-start: 10px;
+        font-size: small;
+      }
+      .contact-us-list {
+        list-style: none;
+        padding-inline-start: 10px;
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Awesome Site</h1>
+      <p>Hello There</p>
+    </header>
+    <main class="main">
+      <section class="main-section">
+        <section class="intro-section">
+          <h2>This is practice website</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quia quasi suscipit. Laudantium ratione alias a qui deserunt at omnis. Commodi earum neque atque, sequi cum temporibus rerum dolor, fugit est quas amet numquam reprehenderit? Cumque quo illo totam reiciendis sint quidem consequatur eos vero qui corrupti, doloremque, deleniti quas.</p>
+        </section>
+        <section class="content-section">
+          <h2>From Our Blog</h2>
+          <article class="content-article">
+            <img src="https://source.unsplash.com/200x200/?nature,water" alt="Thumbnail" class="content-thumbnail">
+            <div class="content-desc">
+              <h4>Article One</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+                mollitia eaque consequatur accusantium
+              </p>
+            </div>
+          </article>
+          <article class="content-article">
+            <img src="https://source.unsplash.com/200x200/?tree" alt="Thumbnail" class="content-thumbnail">
+            <div class="content-desc">
+              <h5>Article Two</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+                mollitia eaque consequatur accusantium
+              </p>
+            </div>
+          </article>
+        </section>
+      </section>
+      <aside class="side-menu">
+        <h5>Navigation</h5>
+        <ul class="navigation-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <h5>Contact Us</h5>
+        <ul class="contact-us-list">
+          <li><strong>Address:</strong> 50 Main st, Boston MA</li>
+          <li><strong>Phone:</strong> (66) 899998888</li>
+          <li><strong>Email:</strong> hello@praneat.com</li>
+        </ul>
+      </aside>
+    </main>
+  </body>
+</html>

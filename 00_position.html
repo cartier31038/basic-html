@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice</title>
+    <style>
+      body {
+        min-height: 200vh;
+      }
+      .parent {
+        border: 1px solid black;
+        padding: 0.25rem;
+        margin: 0.25rem;
+      }
+      .parent-1 {
+        position: relative;
+      }
+      .parent-2 {
+        position: relative;
+      }
+      .child {
+        padding: 0.25rem;
+      }
+      .child-1 {
+        position: sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: lightblue;
+      }
+      .child-2 {
+        background-color: lightcoral;
+      }
+      .child-3 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: burlywood;
+      }
+      .child-4 {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent parent-1">
+      <div class="child child-1">Row 1</div>
+      <div class="child child-2">Row 2</div>
+      <div class="child child-2">Row 2</div>
+      <div class="child child-2">Row 2</div>
+      <div class="child child-2">Row 2</div>
+      <div class="child child-2">Row 2</div>
+    </div>
+    <div class="parent parent-2">
+      <div class="child child-3">Row 3</div>
+      <div class="child child-4">Row 4</div>
+    </div>
+  </body>
+</html>
