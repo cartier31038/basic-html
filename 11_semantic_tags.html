@@ -10,8 +10,18 @@
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
       }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 0.25fr;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+          "header header"
+          "blog side-menu"
+          "footer footer"
+      }
       /* Header */
       header {
+        grid-area: header;
         background-color: #1C658C;
         padding: 0.25rem 1rem;
       }
@@ -21,15 +31,12 @@
       }
       /* Main */
       main {
-        display: grid;
-        /* grid-template-columns: 60% 10%; */
-        grid-template-areas: 'main main side-menu';
+        grid-area: blog;
         padding: 1rem;
-        max-width: 1000px;
         margin: 0 auto;
       }
-      .main-section {
-        grid-area: main;
+      .blog-section {
+        
       }
       .intro-section {
         background-color: #D8D2CB;
@@ -66,10 +73,10 @@
         text-overflow: ellipsis;
       } */
       /* Side Menu */
-      .side-menu {
+      aside {
         grid-area: side-menu;
         background-color: #D8D2CB;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         padding: 0 1rem;
         margin-left: 1rem;
       }
@@ -84,50 +91,73 @@
         padding-inline-start: 10px;
         font-size: small;
       }
+      /* Footer */
+      footer {
+        background-color: #D8D2CB;
+        grid-area: footer;
+      }
+      footer > p {
+        text-align: center;
+        font-size: x-small;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Awesome Site</h1>
-      <p>Hello There</p>
-    </header>
-    <main class="main">
-      <section class="main-section">
-        <section class="intro-section">
-          <h2>This is practice website</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quia quasi suscipit. Laudantium ratione alias a qui deserunt at omnis. Commodi earum neque atque, sequi cum temporibus rerum dolor, fugit est quas amet numquam reprehenderit? Cumque quo illo totam reiciendis sint quidem consequatur eos vero qui corrupti, doloremque, deleniti quas.</p>
+    <div class="container">
+      <header>
+        <h1>Awesome Site</h1>
+        <p>Hello There</p>
+      </header>
+      <main>
+        <section class="blog-section">
+          <section class="intro-section">
+            <h2>This is practice website</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quia quasi suscipit. Laudantium ratione alias a qui deserunt at omnis. Commodi earum neque atque, sequi cum temporibus rerum dolor, fugit est quas amet numquam reprehenderit? Cumque quo illo totam reiciendis sint quidem consequatur eos vero qui corrupti, doloremque, deleniti quas.</p>
+          </section>
+          <section class="content-section">
+            <h2>From Our Blog</h2>
+            <article class="content-article">
+              <img src="https://source.unsplash.com/200x200/?nature,water" alt="Thumbnail" class="content-thumbnail">
+              <div class="content-desc">
+                <h4>Article One</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+                  mollitia eaque consequatur accusantium
+                </p>
+              </div>
+            </article>
+            <article class="content-article">
+              <img src="https://source.unsplash.com/200x200/?tree" alt="Thumbnail" class="content-thumbnail">
+              <div class="content-desc">
+                <h5>Article Two</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+                  mollitia eaque consequatur accusantium
+                </p>
+              </div>
+            </article>
+            <article class="content-article">
+              <img src="https://source.unsplash.com/200x200/?tree" alt="Thumbnail" class="content-thumbnail">
+              <div class="content-desc">
+                <h5>Article Three</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+                  mollitia eaque consequatur accusantium
+                </p>
+              </div>
+            </article>
+          </section>
         </section>
-        <section class="content-section">
-          <h2>From Our Blog</h2>
-          <article class="content-article">
-            <img src="https://source.unsplash.com/200x200/?nature,water" alt="Thumbnail" class="content-thumbnail">
-            <div class="content-desc">
-              <h4>Article One</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-                mollitia eaque consequatur accusantium
-              </p>
-            </div>
-          </article>
-          <article class="content-article">
-            <img src="https://source.unsplash.com/200x200/?tree" alt="Thumbnail" class="content-thumbnail">
-            <div class="content-desc">
-              <h5>Article Two</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-                mollitia eaque consequatur accusantium
-              </p>
-            </div>
-          </article>
-        </section>
-      </section>
-      <aside class="side-menu">
+      </main>
+      <aside>
         <h5>Navigation</h5>
-        <ul class="navigation-list">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
+        <nav>
+          <ul class="navigation-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
         <h5>Contact Us</h5>
         <ul class="contact-us-list">
           <li><strong>Address:</strong> 50 Main st, Boston MA</li>
@@ -135,6 +165,9 @@
           <li><strong>Email:</strong> hello@praneat.com</li>
         </ul>
       </aside>
-    </main>
+      <footer>
+          <p>Copyright &copy;Cartier 2022</p>
+      </footer>
+    </div>
   </body>
 </html>
